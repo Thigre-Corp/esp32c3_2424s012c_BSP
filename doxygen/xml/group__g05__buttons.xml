@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__g05__buttons" kind="group">
+    <compoundname>g05_buttons</compoundname>
+    <title>Buttons</title>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__g05__buttons_1gab129b577812bafca44e432865174c782" prot="public" static="no" strong="no">
+        <type></type>
+        <name>bsp_button_t</name>
+        <enumvalue id="group__g05__buttons_1ggab129b577812bafca44e432865174c782ad2a6d8fd78862295e890c97352699b9a" prot="public">
+          <name>BSP_BUTTON_BTN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__g05__buttons_1ggab129b577812bafca44e432865174c782a346d89be5c0e47f3d6f7cdb025bd4939" prot="public">
+          <name>BSP_BUTTON_NUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="97" column="1" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="97" bodyend="100"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__g05__buttons_1ga709ba5c932018eb218885bb20b27c6c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_iot_button_create</definition>
+        <argsstring>(button_handle_t btn_array[], int *btn_cnt, int btn_array_size)</argsstring>
+        <name>bsp_iot_button_create</name>
+        <param>
+          <type>button_handle_t</type>
+          <declname>btn_array</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>btn_cnt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>btn_array_size</declname>
+        </param>
+        <briefdescription>
+<para>Initialize all buttons. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returned button handlers must be used with espressif/button component API</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">btn_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output button array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">btn_cnt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of button handlers saved to btn_array, can be NULL </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">btn_array_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of output button array. Must be at least BSP_BUTTON_NUM </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK All buttons initialized</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG btn_array is too small or NULL</para>
+</listitem><listitem><para>ESP_FAIL Underlaying iot_button_create failed </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="293" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="293" declcolumn="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__g05__buttons_1ga1d8abaea491c6158cba0d6d8dd1af368" prot="public" static="no">
+        <name>BSP_BUTTON_BTN_IO</name>
+        <initializer>(GPIO_NUM_8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="90" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Buttons BSP API. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

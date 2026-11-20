@@ -1,0 +1,740 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__g04__display" kind="group">
+    <compoundname>g04_display</compoundname>
+    <title>Display and Touch</title>
+    <innerclass refid="structbsp__display__config__t" prot="public">bsp_display_config_t</innerclass>
+    <innerclass refid="structbsp__lcd__handles__t" prot="public">bsp_lcd_handles_t</innerclass>
+    <innerclass refid="structbsp__display__cfg__t" prot="public">bsp_display_cfg_t</innerclass>
+    <innerclass refid="structbsp__touch__config__t" prot="public">bsp_touch_config_t</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__g04__display_1ga351d7157db337483dafe16ea3cf67969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_new</definition>
+        <argsstring>(const bsp_display_config_t *config, esp_lcd_panel_handle_t *ret_panel, esp_lcd_panel_io_handle_t *ret_io)</argsstring>
+        <name>bsp_display_new</name>
+        <param>
+          <type>const <ref refid="structbsp__display__config__t" kindref="compound">bsp_display_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>esp_lcd_panel_handle_t *</type>
+          <declname>ret_panel</declname>
+        </param>
+        <param>
+          <type>esp_lcd_panel_io_handle_t *</type>
+          <declname>ret_io</declname>
+        </param>
+        <briefdescription>
+<para>Create new display panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For maximum flexibility, this function performs only reset and initialization of the display. You must turn on the display explicitly by calling esp_lcd_panel_disp_on_off(). The display&apos;s backlight is not turned on either. You can use bsp_display_backlight_on/off(), <ref refid="group__g04__display_1ga12c7b53be5b337029f2d1aacce916d1c" kindref="member">bsp_display_brightness_set()</ref> (on supported boards) or implement your own backlight control.</para>
+<para>If you want to free resources allocated by this function, you can use esp_lcd API, ie.:</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal">esp_lcd_panel_del(panel);</highlight></codeline>
+<codeline><highlight class="normal">esp_lcd_panel_io_del(io);</highlight></codeline>
+<codeline><highlight class="normal">spi_bus_free(spi_num_from_configuration);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>display configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ret_panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>esp_lcd panel handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ret_io</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>esp_lcd IO handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>Other errors from underlying esp_lcd driver </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="86" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="86" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga5ac200b0ba5d6613a994410bb936410e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_new_with_handles</definition>
+        <argsstring>(const bsp_display_config_t *config, bsp_lcd_handles_t *ret_handles)</argsstring>
+        <name>bsp_display_new_with_handles</name>
+        <param>
+          <type>const <ref refid="structbsp__display__config__t" kindref="compound">bsp_display_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="structbsp__lcd__handles__t" kindref="compound">bsp_lcd_handles_t</ref> *</type>
+          <declname>ret_handles</declname>
+        </param>
+        <briefdescription>
+<para>Create new display panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For maximum flexibility, this function performs only reset and initialization of the display. You must turn on the display explicitly by calling esp_lcd_panel_disp_on_off(). The display&apos;s backlight is not turned on either. You can use bsp_display_backlight_on/off(), <ref refid="group__g04__display_1ga12c7b53be5b337029f2d1aacce916d1c" kindref="member">bsp_display_brightness_set()</ref> (on supported boards) or implement your own backlight control.</para>
+<para>If you want to free resources allocated by this function, you can use API:</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="group__g04__display_1gae3c41ec26043f11aa620c6aa4dd2a36b" kindref="member">bsp_display_delete</ref>();</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>display configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ret_handles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>all esp_lcd handles in one structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>Other errors from underlying esp_lcd driver </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="109" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="109" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gae3c41ec26043f11aa620c6aa4dd2a36b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bsp_display_delete</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_delete</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Delete display panel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="114" column="6" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="114" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gaa917c022925dd941b2fd68cac525a309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_brightness_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_brightness_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize display&apos;s backlight control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If supported, the backlight level can be adjusted using a PWM signal. On platforms without PWM support, only simple On/Off control may be available. If the feature is not supported at all, the function returns an error.</para>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG Parameter error</para>
+</listitem><listitem><para>ESP_ERR_NOT_SUPPORTED Changing backlight is not supported </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="128" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="128" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gaee9fb8561a97b0758d15eb04ba738a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_brightness_deinit</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_brightness_deinit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Deinitialize display&apos;s brightness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG Parameter error</para>
+</listitem><listitem><para>ESP_ERR_NOT_SUPPORTED Changing backlight is not supported </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="138" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="138" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga12c7b53be5b337029f2d1aacce916d1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_brightness_set</definition>
+        <argsstring>(int brightness_percent)</argsstring>
+        <name>bsp_display_brightness_set</name>
+        <param>
+          <type>int</type>
+          <declname>brightness_percent</declname>
+        </param>
+        <briefdescription>
+<para>Set display&apos;s backlight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If supported, the backlight level can be adjusted using a PWM signal. On platforms without PWM support, only simple On/Off control may be available. If the feature is not supported at all, the function returns an error. Backlight must be already initialized by calling <ref refid="group__g04__display_1gaa917c022925dd941b2fd68cac525a309" kindref="member">bsp_display_brightness_init()</ref> or <ref refid="group__g04__display_1ga351d7157db337483dafe16ea3cf67969" kindref="member">bsp_display_new()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">brightness_percent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Brightness in [%] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG Parameter error</para>
+</listitem><listitem><para>ESP_ERR_NOT_SUPPORTED Changing backlight is not supported </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="155" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="155" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga17e487e96d85995e5de4aab309d290b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_backlight_on</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_backlight_on</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn on display backlight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If supported, the backlight level can be adjusted using a PWM signal. On platforms without PWM support, only simple On/Off control may be available. If the feature is not supported at all, the function returns an error. Backlight must be already initialized by calling <ref refid="group__g04__display_1gaa917c022925dd941b2fd68cac525a309" kindref="member">bsp_display_brightness_init()</ref> or <ref refid="group__g04__display_1ga351d7157db337483dafe16ea3cf67969" kindref="member">bsp_display_new()</ref></para>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG Parameter error</para>
+</listitem><listitem><para>ESP_ERR_NOT_SUPPORTED Changing backlight is not supported </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="170" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="170" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gaa09e452cc60dcb24bb2ba980669610de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_backlight_off</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_backlight_off</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn off display backlight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Brightness is controlled with PWM signal to a pin controlling backlight. Brightness must be already initialized by calling <ref refid="group__g04__display_1gaa917c022925dd941b2fd68cac525a309" kindref="member">bsp_display_brightness_init()</ref> or <ref refid="group__g04__display_1ga351d7157db337483dafe16ea3cf67969" kindref="member">bsp_display_new()</ref></para>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG Parameter error</para>
+</listitem><listitem><para>ESP_ERR_NOT_SUPPORTED Changing backlight is not supported </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="183" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" declline="183" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gae4275824d225d70a382b86178f39450c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lv_display_t *</type>
+        <definition>lv_display_t * bsp_display_start</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes SPI, display controller and starts LVGL handling task. LCD backlight must be enabled separately by calling <ref refid="group__g04__display_1ga12c7b53be5b337029f2d1aacce916d1c" kindref="member">bsp_display_brightness_set()</ref></para>
+<para><simplesect kind="return"><para>Pointer to LVGL display or NULL when error occurred </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="197" column="14" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="197" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gaff98dc9c5df3ce94267754f35face5d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lv_display_t *</type>
+        <definition>lv_display_t * bsp_display_start_with_config</definition>
+        <argsstring>(const bsp_display_cfg_t *cfg)</argsstring>
+        <name>bsp_display_start_with_config</name>
+        <param>
+          <type>const <ref refid="structbsp__display__cfg__t" kindref="compound">bsp_display_cfg_t</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Initialize display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes SPI, display controller and starts LVGL handling task. LCD backlight must be enabled separately by calling <ref refid="group__g04__display_1ga12c7b53be5b337029f2d1aacce916d1c" kindref="member">bsp_display_brightness_set()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>display configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to LVGL display or NULL when error occurred </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="209" column="14" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="209" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gaa358520a1c77dbf054e73757e48dea9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lv_indev_t *</type>
+        <definition>lv_indev_t * bsp_display_get_input_dev</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_get_input_dev</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get pointer to input device (touch, buttons, ...) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The LVGL input device is initialized in <ref refid="group__g04__display_1gae4275824d225d70a382b86178f39450c" kindref="member">bsp_display_start()</ref> function.</para>
+</simplesect>
+<simplesect kind="return"><para>Pointer to LVGL input device or NULL when not initialized </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="218" column="12" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="218" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga8f9276ddd28d9427995f513d36aed139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bsp_display_lock</definition>
+        <argsstring>(uint32_t timeout_ms)</argsstring>
+        <name>bsp_display_lock</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout_ms</declname>
+        </param>
+        <briefdescription>
+<para>Take LVGL mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeout_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timeout in [ms]. 0 will block indefinitely. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Mutex was taken </para>
+</simplesect>
+<simplesect kind="return"><para>false Mutex was NOT taken </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="227" column="6" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="227" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1gac08779b1b61a813af6d9c96a4b54740d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bsp_display_unlock</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_unlock</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Give LVGL mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="233" column="6" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="233" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga4bb816859abde4dcf196ca41b380a94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_enter_sleep</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_enter_sleep</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set display enter sleep mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>All the display (LCD, backlight, touch) will enter sleep mode.</para>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK on success</para>
+</listitem><listitem><para>ESP_ERR_NOT_SUPPORTED if this function is not supported by the panel </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="244" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="244" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga4528c90bb660dfe358849b9c379d7ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_display_exit_sleep</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_display_exit_sleep</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set display exit sleep mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>All the display (LCD, backlight, touch) will exit sleep mode.</para>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK on success</para>
+</listitem><listitem><para>ESP_ERR_NOT_SUPPORTED if this function is not supported by the panel </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="255" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="255" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga444b52fd41e46fc4d98fbb90b66a654c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bsp_display_rotate</definition>
+        <argsstring>(lv_display_t *disp, lv_disp_rotation_t rotation)</argsstring>
+        <name>bsp_display_rotate</name>
+        <param>
+          <type>lv_display_t *</type>
+          <declname>disp</declname>
+        </param>
+        <param>
+          <type>lv_disp_rotation_t</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+<para>Rotate screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Display must be already initialized by calling <ref refid="group__g04__display_1gae4275824d225d70a382b86178f39450c" kindref="member">bsp_display_start()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">disp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to LVGL display </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle of the display rotation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="265" column="6" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="265" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g04__display_1ga4f2a60cbdb3279f6c82f1809ba3773b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_touch_new</definition>
+        <argsstring>(const bsp_touch_config_t *config, esp_lcd_touch_handle_t *ret_touch)</argsstring>
+        <name>bsp_touch_new</name>
+        <param>
+          <type>const <ref refid="structbsp__touch__config__t" kindref="compound">bsp_touch_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>esp_lcd_touch_handle_t *</type>
+          <declname>ret_touch</declname>
+        </param>
+        <briefdescription>
+<para>Create new touchscreen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If you want to free resources allocated by this function, you can use esp_lcd_touch API, ie.:</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal">esp_lcd_touch_del(tp);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>touch configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ret_touch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>esp_lcd_touch touchscreen handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>Else esp_lcd_touch failure </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/touch.h" line="51" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/touch.h" declline="51" declcolumn="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__g04__display_1ga91bb847e26e03878b8bf20e017a8ac65" prot="public" static="no">
+        <name>ESP_LCD_COLOR_FORMAT_RGB565</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="25" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga0a39f81d5fc06f5bfb663d17f7d412c8" prot="public" static="no">
+        <name>ESP_LCD_COLOR_FORMAT_RGB888</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="26" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga823422998ccec62281f70e0a3d254730" prot="public" static="no">
+        <name>BSP_LCD_COLOR_FORMAT</name>
+        <initializer>(ESP_LCD_COLOR_FORMAT_RGB565)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="29" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga56e41e34289dd93656ab986e19b33f4c" prot="public" static="no">
+        <name>BSP_LCD_BIGENDIAN</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="31" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1gaa3c7147da347c6abcd08150af1d9519c" prot="public" static="no">
+        <name>BSP_LCD_BITS_PER_PIXEL</name>
+        <initializer>(16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="33" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga4c811f05b6d6834452c81d9383a9decf" prot="public" static="no">
+        <name>BSP_LCD_COLOR_SPACE</name>
+        <initializer>(LCD_RGB_ELEMENT_ORDER_BGR)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="35" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga4dd6cff9fefdb3dfc4cc99e723412852" prot="public" static="no">
+        <name>BSP_LCD_H_RES</name>
+        <initializer>(240)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="38" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1gadb1bc561c984969a7633be9173ff8d1a" prot="public" static="no">
+        <name>BSP_LCD_V_RES</name>
+        <initializer>(240)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="39" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga6e804c690a1234b4838ca7a92f587bb6" prot="public" static="no">
+        <name>BSP_LCD_PCLK</name>
+        <initializer>(GPIO_NUM_6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="77" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1gaaa2d28b309a03c13bd464650fd40999c" prot="public" static="no">
+        <name>BSP_LCD_DATA0</name>
+        <initializer>(GPIO_NUM_7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="78" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1gae20a7abfd875f359d898b33ad0fc43db" prot="public" static="no">
+        <name>BSP_LCD_DC</name>
+        <initializer>(GPIO_NUM_2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="79" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga07b260fe35bcd9c416f14c40559ae949" prot="public" static="no">
+        <name>BSP_LCD_CS</name>
+        <initializer>(GPIO_NUM_10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="80" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1gae25ab440c1860bcc21ed994114d9c56e" prot="public" static="no">
+        <name>BSP_LCD_RST</name>
+        <initializer>(GPIO_NUM_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="81" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga592f9f115d6c6f097d7d976a15e084b5" prot="public" static="no">
+        <name>BSP_LCD_BACKLIGHT</name>
+        <initializer>(GPIO_NUM_3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="82" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1gab558d70a7b47c2bcc23c1072533b39e6" prot="public" static="no">
+        <name>BSP_LCD_TOUCH_INT</name>
+        <initializer>(GPIO_NUM_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="83" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga96deef22e8868d28956349a7532a451a" prot="public" static="no">
+        <name>BSP_LCD_PIXEL_CLOCK_HZ</name>
+        <initializer>(40 * 1000 * 1000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="170" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g04__display_1ga36f8a7c7ff061c8fb80096eee581200c" prot="public" static="no">
+        <name>BSP_LCD_SPI_NUM</name>
+        <initializer>(SPI2_HOST)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="171" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Display BSP API. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

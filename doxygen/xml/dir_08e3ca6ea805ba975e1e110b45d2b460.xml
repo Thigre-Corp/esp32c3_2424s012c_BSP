@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_08e3ca6ea805ba975e1e110b45d2b460" kind="dir">
+    <compoundname>gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp</compoundname>
+    <innerfile refid="display_8h">display.h</innerfile>
+    <innerfile refid="esp32c3__2424s012c_8h">esp32c3_2424s012c.h</innerfile>
+    <innerfile refid="touch_8h">touch.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="structbsp__display__cfg__t" kind="struct"><name>bsp_display_cfg_t</name>
+    <member refid="structbsp__display__cfg__t_1aec4bda7bc3f599bfd98e0e68c0b68926" kind="variable"><name>lvgl_port_cfg</name></member>
+    <member refid="structbsp__display__cfg__t_1a5ca8835d65e0fc958726cbfb17861afb" kind="variable"><name>buffer_size</name></member>
+    <member refid="structbsp__display__cfg__t_1a9865134f79a455deb42ed07e52dc7d33" kind="variable"><name>double_buffer</name></member>
+    <member refid="structbsp__display__cfg__t_1a3c212f07d5d4337a5cadf642b2790e51" kind="variable"><name>buff_dma</name></member>
+    <member refid="structbsp__display__cfg__t_1ae63a516e34101a45ef07c63519dba582" kind="variable"><name>buff_spiram</name></member>
+    <member refid="structbsp__display__cfg__t_1a3f8159130f2fcf0d4aab4b04febb5cf0" kind="variable"><name>sw_rotate</name></member>
+    <member refid="structbsp__display__cfg__t_1afc1512cb070eae202c40e31c846c455e" kind="variable"><name>flags</name></member>
+  </compound>
+  <compound refid="structbsp__display__config__t" kind="struct"><name>bsp_display_config_t</name>
+    <member refid="structbsp__display__config__t_1a0d3f31290063548337bb519672e8dd04" kind="variable"><name>max_transfer_sz</name></member>
+  </compound>
+  <compound refid="structbsp__lcd__handles__t" kind="struct"><name>bsp_lcd_handles_t</name>
+    <member refid="structbsp__lcd__handles__t_1adbdb94dd358f816f931e4b4a4a2fd298" kind="variable"><name>io</name></member>
+    <member refid="structbsp__lcd__handles__t_1aa72daaaf4952867a0a78db38e959a8a1" kind="variable"><name>panel</name></member>
+    <member refid="structbsp__lcd__handles__t_1afb72bab61b124bc127bce75ea08ee37c" kind="variable"><name>control</name></member>
+  </compound>
+  <compound refid="structbsp__touch__config__t" kind="struct"><name>bsp_touch_config_t</name>
+    <member refid="structbsp__touch__config__t_1a5923ed530da46f865949cefc1c3801a4" kind="variable"><name>dummy</name></member>
+  </compound>
+  <compound refid="display_8h" kind="file"><name>display.h</name>
+    <member refid="group__g04__display_1ga91bb847e26e03878b8bf20e017a8ac65" kind="define"><name>ESP_LCD_COLOR_FORMAT_RGB565</name></member>
+    <member refid="group__g04__display_1ga0a39f81d5fc06f5bfb663d17f7d412c8" kind="define"><name>ESP_LCD_COLOR_FORMAT_RGB888</name></member>
+    <member refid="group__g04__display_1ga823422998ccec62281f70e0a3d254730" kind="define"><name>BSP_LCD_COLOR_FORMAT</name></member>
+    <member refid="group__g04__display_1ga56e41e34289dd93656ab986e19b33f4c" kind="define"><name>BSP_LCD_BIGENDIAN</name></member>
+    <member refid="group__g04__display_1gaa3c7147da347c6abcd08150af1d9519c" kind="define"><name>BSP_LCD_BITS_PER_PIXEL</name></member>
+    <member refid="group__g04__display_1ga4c811f05b6d6834452c81d9383a9decf" kind="define"><name>BSP_LCD_COLOR_SPACE</name></member>
+    <member refid="group__g04__display_1ga4dd6cff9fefdb3dfc4cc99e723412852" kind="define"><name>BSP_LCD_H_RES</name></member>
+    <member refid="group__g04__display_1gadb1bc561c984969a7633be9173ff8d1a" kind="define"><name>BSP_LCD_V_RES</name></member>
+    <member refid="group__g04__display_1ga351d7157db337483dafe16ea3cf67969" kind="function"><name>bsp_display_new</name></member>
+    <member refid="group__g04__display_1ga5ac200b0ba5d6613a994410bb936410e" kind="function"><name>bsp_display_new_with_handles</name></member>
+    <member refid="group__g04__display_1gae3c41ec26043f11aa620c6aa4dd2a36b" kind="function"><name>bsp_display_delete</name></member>
+    <member refid="group__g04__display_1gaa917c022925dd941b2fd68cac525a309" kind="function"><name>bsp_display_brightness_init</name></member>
+    <member refid="group__g04__display_1gaee9fb8561a97b0758d15eb04ba738a93" kind="function"><name>bsp_display_brightness_deinit</name></member>
+    <member refid="group__g04__display_1ga12c7b53be5b337029f2d1aacce916d1c" kind="function"><name>bsp_display_brightness_set</name></member>
+    <member refid="group__g04__display_1ga17e487e96d85995e5de4aab309d290b2" kind="function"><name>bsp_display_backlight_on</name></member>
+    <member refid="group__g04__display_1gaa09e452cc60dcb24bb2ba980669610de" kind="function"><name>bsp_display_backlight_off</name></member>
+  </compound>
+  <compound refid="esp32c3__2424s012c_8h" kind="file"><name>esp32c3_2424s012c.h</name>
+    <member refid="group__boardname_1ga6e0a5d179ff0ced21851334c593ec08e" kind="define"><name>BSP_BOARD_ESP32C3_2424S012C</name></member>
+    <member refid="group__capabilities_1gaf3184870706e0f9f1b2b197c88b1d97f" kind="define"><name>BSP_CAPS_DISPLAY</name></member>
+    <member refid="group__capabilities_1gad0498d67d7e36d8e145c39888a1e6a4d" kind="define"><name>BSP_CAPS_TOUCH</name></member>
+    <member refid="group__capabilities_1gaec2ddd404379a47d2676d04ead119f5a" kind="define"><name>BSP_CAPS_BUTTONS</name></member>
+    <member refid="group__capabilities_1gab277c010723e28568f339e353fce6bef" kind="define"><name>BSP_CAPS_KNOB</name></member>
+    <member refid="group__capabilities_1gad63a95c6d3dc6ac82b209c1321571376" kind="define"><name>BSP_CAPS_AUDIO</name></member>
+    <member refid="group__capabilities_1ga01e31729481f9bfca5e9fe071438a177" kind="define"><name>BSP_CAPS_AUDIO_SPEAKER</name></member>
+    <member refid="group__capabilities_1ga811d0c5c3218cf067cd4dc08e519a01b" kind="define"><name>BSP_CAPS_AUDIO_MIC</name></member>
+    <member refid="group__capabilities_1ga2a5c3ffe7d8bf63f01bc45a713a424d1" kind="define"><name>BSP_CAPS_SDCARD</name></member>
+    <member refid="group__capabilities_1ga6372d1e8828a9b631ca8bbd348a2cc20" kind="define"><name>BSP_CAPS_LED</name></member>
+    <member refid="group__capabilities_1gacc33fc23039abc16d88b1e266b7d76b2" kind="define"><name>BSP_CAPS_CAMERA</name></member>
+    <member refid="group__capabilities_1ga420edbb8092cf7798d9b60f7b6b099ed" kind="define"><name>BSP_CAPS_BAT</name></member>
+    <member refid="group__capabilities_1gaf5bb0ba529832b2529e25954094d3baa" kind="define"><name>BSP_CAPS_IMU</name></member>
+    <member refid="group__capabilities_1gaa4989eb0836176c95447f3174c096775" kind="define"><name>BSP_CAPS_HUMITURE</name></member>
+    <member refid="group__g01__i2c_1gaf6e6a5b5564ddafadb75fca91f8f14b0" kind="define"><name>BSP_I2C_SCL</name></member>
+    <member refid="group__g01__i2c_1ga4a7ea0acc73c945f4922eb57fd462beb" kind="define"><name>BSP_I2C_SDA</name></member>
+    <member refid="group__g04__display_1ga6e804c690a1234b4838ca7a92f587bb6" kind="define"><name>BSP_LCD_PCLK</name></member>
+    <member refid="group__g04__display_1gaaa2d28b309a03c13bd464650fd40999c" kind="define"><name>BSP_LCD_DATA0</name></member>
+    <member refid="group__g04__display_1gae20a7abfd875f359d898b33ad0fc43db" kind="define"><name>BSP_LCD_DC</name></member>
+    <member refid="group__g04__display_1ga07b260fe35bcd9c416f14c40559ae949" kind="define"><name>BSP_LCD_CS</name></member>
+    <member refid="group__g04__display_1gae25ab440c1860bcc21ed994114d9c56e" kind="define"><name>BSP_LCD_RST</name></member>
+    <member refid="group__g04__display_1ga592f9f115d6c6f097d7d976a15e084b5" kind="define"><name>BSP_LCD_BACKLIGHT</name></member>
+    <member refid="group__g04__display_1gab558d70a7b47c2bcc23c1072533b39e6" kind="define"><name>BSP_LCD_TOUCH_INT</name></member>
+    <member refid="group__g05__buttons_1ga1d8abaea491c6158cba0d6d8dd1af368" kind="define"><name>BSP_BUTTON_BTN_IO</name></member>
+    <member refid="group__g01__i2c_1ga0ecff944440fa9ccf0241e8acf1427dc" kind="define"><name>BSP_I2C_NUM</name></member>
+    <member refid="group__g04__display_1ga96deef22e8868d28956349a7532a451a" kind="define"><name>BSP_LCD_PIXEL_CLOCK_HZ</name></member>
+    <member refid="group__g04__display_1ga36f8a7c7ff061c8fb80096eee581200c" kind="define"><name>BSP_LCD_SPI_NUM</name></member>
+    <member refid="group__g05__buttons_1gab129b577812bafca44e432865174c782" kind="enum"><name>bsp_button_t</name></member>
+    <member refid="group__g01__i2c_1gafb504c284aa8a47f2ffee89038bd5b98" kind="function"><name>bsp_i2c_init</name></member>
+    <member refid="group__g01__i2c_1gaa6817a14a21673842bdc988aedf23bcd" kind="function"><name>bsp_i2c_deinit</name></member>
+    <member refid="group__g01__i2c_1ga7379e225eb4230551bdb96d2ed2dabca" kind="function"><name>bsp_i2c_get_handle</name></member>
+    <member refid="group__g04__display_1gae4275824d225d70a382b86178f39450c" kind="function"><name>bsp_display_start</name></member>
+    <member refid="group__g04__display_1gaff98dc9c5df3ce94267754f35face5d2" kind="function"><name>bsp_display_start_with_config</name></member>
+    <member refid="group__g04__display_1gaa358520a1c77dbf054e73757e48dea9a" kind="function"><name>bsp_display_get_input_dev</name></member>
+    <member refid="group__g04__display_1ga8f9276ddd28d9427995f513d36aed139" kind="function"><name>bsp_display_lock</name></member>
+    <member refid="group__g04__display_1gac08779b1b61a813af6d9c96a4b54740d" kind="function"><name>bsp_display_unlock</name></member>
+    <member refid="group__g04__display_1ga4bb816859abde4dcf196ca41b380a94a" kind="function"><name>bsp_display_enter_sleep</name></member>
+    <member refid="group__g04__display_1ga4528c90bb660dfe358849b9c379d7ca9" kind="function"><name>bsp_display_exit_sleep</name></member>
+    <member refid="group__g04__display_1ga444b52fd41e46fc4d98fbb90b66a654c" kind="function"><name>bsp_display_rotate</name></member>
+    <member refid="group__g05__buttons_1ga709ba5c932018eb218885bb20b27c6c0" kind="function"><name>bsp_iot_button_create</name></member>
+  </compound>
+  <compound refid="touch_8h" kind="file"><name>touch.h</name>
+    <member refid="group__g04__display_1ga4f2a60cbdb3279f6c82f1809ba3773b7" kind="function"><name>bsp_touch_new</name></member>
+  </compound>
+  <compound refid="group__boardname" kind="group"><name>boardname</name>
+    <member refid="group__boardname_1ga6e0a5d179ff0ced21851334c593ec08e" kind="define"><name>BSP_BOARD_ESP32C3_2424S012C</name></member>
+  </compound>
+  <compound refid="group__capabilities" kind="group"><name>capabilities</name>
+    <member refid="group__capabilities_1gaf3184870706e0f9f1b2b197c88b1d97f" kind="define"><name>BSP_CAPS_DISPLAY</name></member>
+    <member refid="group__capabilities_1gad0498d67d7e36d8e145c39888a1e6a4d" kind="define"><name>BSP_CAPS_TOUCH</name></member>
+    <member refid="group__capabilities_1gaec2ddd404379a47d2676d04ead119f5a" kind="define"><name>BSP_CAPS_BUTTONS</name></member>
+    <member refid="group__capabilities_1gab277c010723e28568f339e353fce6bef" kind="define"><name>BSP_CAPS_KNOB</name></member>
+    <member refid="group__capabilities_1gad63a95c6d3dc6ac82b209c1321571376" kind="define"><name>BSP_CAPS_AUDIO</name></member>
+    <member refid="group__capabilities_1ga01e31729481f9bfca5e9fe071438a177" kind="define"><name>BSP_CAPS_AUDIO_SPEAKER</name></member>
+    <member refid="group__capabilities_1ga811d0c5c3218cf067cd4dc08e519a01b" kind="define"><name>BSP_CAPS_AUDIO_MIC</name></member>
+    <member refid="group__capabilities_1ga2a5c3ffe7d8bf63f01bc45a713a424d1" kind="define"><name>BSP_CAPS_SDCARD</name></member>
+    <member refid="group__capabilities_1ga6372d1e8828a9b631ca8bbd348a2cc20" kind="define"><name>BSP_CAPS_LED</name></member>
+    <member refid="group__capabilities_1gacc33fc23039abc16d88b1e266b7d76b2" kind="define"><name>BSP_CAPS_CAMERA</name></member>
+    <member refid="group__capabilities_1ga420edbb8092cf7798d9b60f7b6b099ed" kind="define"><name>BSP_CAPS_BAT</name></member>
+    <member refid="group__capabilities_1gaf5bb0ba529832b2529e25954094d3baa" kind="define"><name>BSP_CAPS_IMU</name></member>
+    <member refid="group__capabilities_1gaa4989eb0836176c95447f3174c096775" kind="define"><name>BSP_CAPS_HUMITURE</name></member>
+  </compound>
+  <compound refid="group__g01__i2c" kind="group"><name>g01_i2c</name>
+    <member refid="group__g01__i2c_1gafb504c284aa8a47f2ffee89038bd5b98" kind="function"><name>bsp_i2c_init</name></member>
+    <member refid="group__g01__i2c_1gaa6817a14a21673842bdc988aedf23bcd" kind="function"><name>bsp_i2c_deinit</name></member>
+    <member refid="group__g01__i2c_1ga7379e225eb4230551bdb96d2ed2dabca" kind="function"><name>bsp_i2c_get_handle</name></member>
+    <member refid="group__g01__i2c_1gaf6e6a5b5564ddafadb75fca91f8f14b0" kind="define"><name>BSP_I2C_SCL</name></member>
+    <member refid="group__g01__i2c_1ga4a7ea0acc73c945f4922eb57fd462beb" kind="define"><name>BSP_I2C_SDA</name></member>
+    <member refid="group__g01__i2c_1ga0ecff944440fa9ccf0241e8acf1427dc" kind="define"><name>BSP_I2C_NUM</name></member>
+  </compound>
+  <compound refid="group__g04__display" kind="group"><name>g04_display</name>
+    <member refid="group__g04__display_1ga351d7157db337483dafe16ea3cf67969" kind="function"><name>bsp_display_new</name></member>
+    <member refid="group__g04__display_1ga5ac200b0ba5d6613a994410bb936410e" kind="function"><name>bsp_display_new_with_handles</name></member>
+    <member refid="group__g04__display_1gae3c41ec26043f11aa620c6aa4dd2a36b" kind="function"><name>bsp_display_delete</name></member>
+    <member refid="group__g04__display_1gaa917c022925dd941b2fd68cac525a309" kind="function"><name>bsp_display_brightness_init</name></member>
+    <member refid="group__g04__display_1gaee9fb8561a97b0758d15eb04ba738a93" kind="function"><name>bsp_display_brightness_deinit</name></member>
+    <member refid="group__g04__display_1ga12c7b53be5b337029f2d1aacce916d1c" kind="function"><name>bsp_display_brightness_set</name></member>
+    <member refid="group__g04__display_1ga17e487e96d85995e5de4aab309d290b2" kind="function"><name>bsp_display_backlight_on</name></member>
+    <member refid="group__g04__display_1gaa09e452cc60dcb24bb2ba980669610de" kind="function"><name>bsp_display_backlight_off</name></member>
+    <member refid="group__g04__display_1gae4275824d225d70a382b86178f39450c" kind="function"><name>bsp_display_start</name></member>
+    <member refid="group__g04__display_1gaff98dc9c5df3ce94267754f35face5d2" kind="function"><name>bsp_display_start_with_config</name></member>
+    <member refid="group__g04__display_1gaa358520a1c77dbf054e73757e48dea9a" kind="function"><name>bsp_display_get_input_dev</name></member>
+    <member refid="group__g04__display_1ga8f9276ddd28d9427995f513d36aed139" kind="function"><name>bsp_display_lock</name></member>
+    <member refid="group__g04__display_1gac08779b1b61a813af6d9c96a4b54740d" kind="function"><name>bsp_display_unlock</name></member>
+    <member refid="group__g04__display_1ga4bb816859abde4dcf196ca41b380a94a" kind="function"><name>bsp_display_enter_sleep</name></member>
+    <member refid="group__g04__display_1ga4528c90bb660dfe358849b9c379d7ca9" kind="function"><name>bsp_display_exit_sleep</name></member>
+    <member refid="group__g04__display_1ga444b52fd41e46fc4d98fbb90b66a654c" kind="function"><name>bsp_display_rotate</name></member>
+    <member refid="group__g04__display_1ga4f2a60cbdb3279f6c82f1809ba3773b7" kind="function"><name>bsp_touch_new</name></member>
+    <member refid="group__g04__display_1ga91bb847e26e03878b8bf20e017a8ac65" kind="define"><name>ESP_LCD_COLOR_FORMAT_RGB565</name></member>
+    <member refid="group__g04__display_1ga0a39f81d5fc06f5bfb663d17f7d412c8" kind="define"><name>ESP_LCD_COLOR_FORMAT_RGB888</name></member>
+    <member refid="group__g04__display_1ga823422998ccec62281f70e0a3d254730" kind="define"><name>BSP_LCD_COLOR_FORMAT</name></member>
+    <member refid="group__g04__display_1ga56e41e34289dd93656ab986e19b33f4c" kind="define"><name>BSP_LCD_BIGENDIAN</name></member>
+    <member refid="group__g04__display_1gaa3c7147da347c6abcd08150af1d9519c" kind="define"><name>BSP_LCD_BITS_PER_PIXEL</name></member>
+    <member refid="group__g04__display_1ga4c811f05b6d6834452c81d9383a9decf" kind="define"><name>BSP_LCD_COLOR_SPACE</name></member>
+    <member refid="group__g04__display_1ga4dd6cff9fefdb3dfc4cc99e723412852" kind="define"><name>BSP_LCD_H_RES</name></member>
+    <member refid="group__g04__display_1gadb1bc561c984969a7633be9173ff8d1a" kind="define"><name>BSP_LCD_V_RES</name></member>
+    <member refid="group__g04__display_1ga6e804c690a1234b4838ca7a92f587bb6" kind="define"><name>BSP_LCD_PCLK</name></member>
+    <member refid="group__g04__display_1gaaa2d28b309a03c13bd464650fd40999c" kind="define"><name>BSP_LCD_DATA0</name></member>
+    <member refid="group__g04__display_1gae20a7abfd875f359d898b33ad0fc43db" kind="define"><name>BSP_LCD_DC</name></member>
+    <member refid="group__g04__display_1ga07b260fe35bcd9c416f14c40559ae949" kind="define"><name>BSP_LCD_CS</name></member>
+    <member refid="group__g04__display_1gae25ab440c1860bcc21ed994114d9c56e" kind="define"><name>BSP_LCD_RST</name></member>
+    <member refid="group__g04__display_1ga592f9f115d6c6f097d7d976a15e084b5" kind="define"><name>BSP_LCD_BACKLIGHT</name></member>
+    <member refid="group__g04__display_1gab558d70a7b47c2bcc23c1072533b39e6" kind="define"><name>BSP_LCD_TOUCH_INT</name></member>
+    <member refid="group__g04__display_1ga96deef22e8868d28956349a7532a451a" kind="define"><name>BSP_LCD_PIXEL_CLOCK_HZ</name></member>
+    <member refid="group__g04__display_1ga36f8a7c7ff061c8fb80096eee581200c" kind="define"><name>BSP_LCD_SPI_NUM</name></member>
+  </compound>
+  <compound refid="group__g05__buttons" kind="group"><name>g05_buttons</name>
+    <member refid="group__g05__buttons_1gab129b577812bafca44e432865174c782" kind="enum"><name>bsp_button_t</name></member>
+    <member refid="group__g05__buttons_1ggab129b577812bafca44e432865174c782ad2a6d8fd78862295e890c97352699b9a" kind="enumvalue"><name>BSP_BUTTON_BTN</name></member>
+    <member refid="group__g05__buttons_1ggab129b577812bafca44e432865174c782a346d89be5c0e47f3d6f7cdb025bd4939" kind="enumvalue"><name>BSP_BUTTON_NUM</name></member>
+    <member refid="group__g05__buttons_1ga709ba5c932018eb218885bb20b27c6c0" kind="function"><name>bsp_iot_button_create</name></member>
+    <member refid="group__g05__buttons_1ga1d8abaea491c6158cba0d6d8dd1af368" kind="define"><name>BSP_BUTTON_BTN_IO</name></member>
+  </compound>
+  <compound refid="group__g02__storage" kind="group"><name>g02_storage</name>
+  </compound>
+  <compound refid="dir_060331f74d900f3aef30613c7db79a29" kind="dir"><name>gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7</name>
+  </compound>
+  <compound refid="dir_08e3ca6ea805ba975e1e110b45d2b460" kind="dir"><name>gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp</name>
+  </compound>
+  <compound refid="dir_d8957b229e00ce30b063d614927e2708" kind="dir"><name>gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c</name>
+  </compound>
+  <compound refid="dir_76d06afa57792f775bcb80774dbca277" kind="dir"><name>gen</name>
+  </compound>
+  <compound refid="dir_e138e9c4bf91fe6489037fe2e30f7e94" kind="dir"><name>gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include</name>
+  </compound>
+  <compound refid="dir_13874ce5648c5c53238750c36d616016" kind="dir"><name>gen/output</name>
+  </compound>
+</doxygenindex>

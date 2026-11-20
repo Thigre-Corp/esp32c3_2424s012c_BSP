@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="esp32c3__2424s012c_8h" kind="file" language="C++">
+    <compoundname>esp32c3_2424s012c.h</compoundname>
+    <includes local="yes">sdkconfig.h</includes>
+    <includes local="yes">driver/gpio.h</includes>
+    <includes local="yes">bsp/config.h</includes>
+    <includes local="yes">driver/i2c_master.h</includes>
+    <includes local="yes">esp_vfs_fat.h</includes>
+    <includes local="yes">iot_button.h</includes>
+    <includes refid="display_8h" local="yes">bsp/display.h</includes>
+    <includes local="yes">lvgl.h</includes>
+    <includes local="yes">esp_lvgl_port.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>bsp/display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h</label>
+        <link refid="esp32c3__2424s012c_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bsp/config.h</label>
+      </node>
+      <node id="3">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="5">
+        <label>driver/i2c_master.h</label>
+      </node>
+      <node id="9">
+        <label>esp_lcd_types.h</label>
+      </node>
+      <node id="11">
+        <label>esp_lvgl_port.h</label>
+      </node>
+      <node id="6">
+        <label>esp_vfs_fat.h</label>
+      </node>
+      <node id="7">
+        <label>iot_button.h</label>
+      </node>
+      <node id="10">
+        <label>lvgl.h</label>
+      </node>
+      <node id="2">
+        <label>sdkconfig.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structbsp__display__cfg__t" prot="public">bsp_display_cfg_t</innerclass>
+    <sectiondef kind="define">
+      <member refid="group__boardname_1ga6e0a5d179ff0ced21851334c593ec08e" kind="define"><name>BSP_BOARD_ESP32C3_2424S012C</name></member>
+      <member refid="group__capabilities_1gaf3184870706e0f9f1b2b197c88b1d97f" kind="define"><name>BSP_CAPS_DISPLAY</name></member>
+      <member refid="group__capabilities_1gad0498d67d7e36d8e145c39888a1e6a4d" kind="define"><name>BSP_CAPS_TOUCH</name></member>
+      <member refid="group__capabilities_1gaec2ddd404379a47d2676d04ead119f5a" kind="define"><name>BSP_CAPS_BUTTONS</name></member>
+      <member refid="group__capabilities_1gab277c010723e28568f339e353fce6bef" kind="define"><name>BSP_CAPS_KNOB</name></member>
+      <member refid="group__capabilities_1gad63a95c6d3dc6ac82b209c1321571376" kind="define"><name>BSP_CAPS_AUDIO</name></member>
+      <member refid="group__capabilities_1ga01e31729481f9bfca5e9fe071438a177" kind="define"><name>BSP_CAPS_AUDIO_SPEAKER</name></member>
+      <member refid="group__capabilities_1ga811d0c5c3218cf067cd4dc08e519a01b" kind="define"><name>BSP_CAPS_AUDIO_MIC</name></member>
+      <member refid="group__capabilities_1ga2a5c3ffe7d8bf63f01bc45a713a424d1" kind="define"><name>BSP_CAPS_SDCARD</name></member>
+      <member refid="group__capabilities_1ga6372d1e8828a9b631ca8bbd348a2cc20" kind="define"><name>BSP_CAPS_LED</name></member>
+      <member refid="group__capabilities_1gacc33fc23039abc16d88b1e266b7d76b2" kind="define"><name>BSP_CAPS_CAMERA</name></member>
+      <member refid="group__capabilities_1ga420edbb8092cf7798d9b60f7b6b099ed" kind="define"><name>BSP_CAPS_BAT</name></member>
+      <member refid="group__capabilities_1gaf5bb0ba529832b2529e25954094d3baa" kind="define"><name>BSP_CAPS_IMU</name></member>
+      <member refid="group__capabilities_1gaa4989eb0836176c95447f3174c096775" kind="define"><name>BSP_CAPS_HUMITURE</name></member>
+      <member refid="group__g01__i2c_1gaf6e6a5b5564ddafadb75fca91f8f14b0" kind="define"><name>BSP_I2C_SCL</name></member>
+      <member refid="group__g01__i2c_1ga4a7ea0acc73c945f4922eb57fd462beb" kind="define"><name>BSP_I2C_SDA</name></member>
+      <member refid="group__g04__display_1ga6e804c690a1234b4838ca7a92f587bb6" kind="define"><name>BSP_LCD_PCLK</name></member>
+      <member refid="group__g04__display_1gaaa2d28b309a03c13bd464650fd40999c" kind="define"><name>BSP_LCD_DATA0</name></member>
+      <member refid="group__g04__display_1gae20a7abfd875f359d898b33ad0fc43db" kind="define"><name>BSP_LCD_DC</name></member>
+      <member refid="group__g04__display_1ga07b260fe35bcd9c416f14c40559ae949" kind="define"><name>BSP_LCD_CS</name></member>
+      <member refid="group__g04__display_1gae25ab440c1860bcc21ed994114d9c56e" kind="define"><name>BSP_LCD_RST</name></member>
+      <member refid="group__g04__display_1ga592f9f115d6c6f097d7d976a15e084b5" kind="define"><name>BSP_LCD_BACKLIGHT</name></member>
+      <member refid="group__g04__display_1gab558d70a7b47c2bcc23c1072533b39e6" kind="define"><name>BSP_LCD_TOUCH_INT</name></member>
+      <member refid="group__g05__buttons_1ga1d8abaea491c6158cba0d6d8dd1af368" kind="define"><name>BSP_BUTTON_BTN_IO</name></member>
+      <member refid="group__g01__i2c_1ga0ecff944440fa9ccf0241e8acf1427dc" kind="define"><name>BSP_I2C_NUM</name></member>
+      <member refid="group__g04__display_1ga96deef22e8868d28956349a7532a451a" kind="define"><name>BSP_LCD_PIXEL_CLOCK_HZ</name></member>
+      <member refid="group__g04__display_1ga36f8a7c7ff061c8fb80096eee581200c" kind="define"><name>BSP_LCD_SPI_NUM</name></member>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__g05__buttons_1gab129b577812bafca44e432865174c782" kind="enum"><name>bsp_button_t</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__g01__i2c_1gafb504c284aa8a47f2ffee89038bd5b98" kind="function"><name>bsp_i2c_init</name></member>
+      <member refid="group__g01__i2c_1gaa6817a14a21673842bdc988aedf23bcd" kind="function"><name>bsp_i2c_deinit</name></member>
+      <member refid="group__g01__i2c_1ga7379e225eb4230551bdb96d2ed2dabca" kind="function"><name>bsp_i2c_get_handle</name></member>
+      <member refid="group__g04__display_1gae4275824d225d70a382b86178f39450c" kind="function"><name>bsp_display_start</name></member>
+      <member refid="group__g04__display_1gaff98dc9c5df3ce94267754f35face5d2" kind="function"><name>bsp_display_start_with_config</name></member>
+      <member refid="group__g04__display_1gaa358520a1c77dbf054e73757e48dea9a" kind="function"><name>bsp_display_get_input_dev</name></member>
+      <member refid="group__g04__display_1ga8f9276ddd28d9427995f513d36aed139" kind="function"><name>bsp_display_lock</name></member>
+      <member refid="group__g04__display_1gac08779b1b61a813af6d9c96a4b54740d" kind="function"><name>bsp_display_unlock</name></member>
+      <member refid="group__g04__display_1ga4bb816859abde4dcf196ca41b380a94a" kind="function"><name>bsp_display_enter_sleep</name></member>
+      <member refid="group__g04__display_1ga4528c90bb660dfe358849b9c379d7ca9" kind="function"><name>bsp_display_exit_sleep</name></member>
+      <member refid="group__g04__display_1ga444b52fd41e46fc4d98fbb90b66a654c" kind="function"><name>bsp_display_rotate</name></member>
+      <member refid="group__g05__buttons_1ga709ba5c932018eb218885bb20b27c6c0" kind="function"><name>bsp_iot_button_create</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>ESP BSP: esp32c3_2424s012c. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>SPDX-FileCopyrightText:<sp/>2026<sp/>Espressif<sp/>Systems<sp/>(Shanghai)<sp/>CO<sp/>LTD</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sdkconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;bsp/config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/i2c_master.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_vfs_fat.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;iot_button.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="display_8h" kindref="compound">bsp/display.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BSP_CONFIG_NO_GRAPHIC_LIB<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lvgl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_lvgl_port.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BSP_CONFIG_NO_GRAPHIC_LIB<sp/>==<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************************************</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>BSP<sp/>Board<sp/>Name</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>**************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_BOARD_ESP32C3_2424S012C</highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>boardname</highlight><codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************************************</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/>BSP<sp/>Capabilities</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>**************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_DISPLAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_TOUCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_BUTTONS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_KNOB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_AUDIO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_AUDIO_SPEAKER<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_AUDIO_MIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_SDCARD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_LED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_CAMERA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_BAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_IMU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_CAPS_HUMITURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>capabilities</highlight><codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************************************</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/><sp/>Board<sp/>pinout</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>**************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_I2C_SCL<sp/><sp/><sp/><sp/><sp/>(GPIO_NUM_5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_I2C_SDA<sp/><sp/><sp/><sp/><sp/>(GPIO_NUM_4)</highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>i2c</highlight><codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_PCLK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_NUM_6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_DATA0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_NUM_7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_DC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_NUM_2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_CS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_NUM_10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_RST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_NUM_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_BACKLIGHT<sp/><sp/><sp/><sp/>(GPIO_NUM_3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_TOUCH_INT<sp/><sp/><sp/><sp/>(GPIO_NUM_0)</highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>display</highlight><codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_BUTTON_BTN_IO<sp/><sp/><sp/><sp/>(GPIO_NUM_8)</highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>buttons</highlight><codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Button<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>BSP_BUTTON_BTN,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>BSP_BUTTON_NUM</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}<sp/>bsp_button_t;</highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>buttons</highlight><codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************************************</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/>*<sp/>I2C<sp/>interface</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/>**************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_I2C_NUM<sp/><sp/><sp/><sp/><sp/>CONFIG_BSP_I2C_NUM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="group__g01__i2c_1gafb504c284aa8a47f2ffee89038bd5b98" refkind="member"><highlight class="normal">esp_err_t<sp/><ref refid="group__g01__i2c_1gafb504c284aa8a47f2ffee89038bd5b98" kindref="member">bsp_i2c_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="group__g01__i2c_1gaa6817a14a21673842bdc988aedf23bcd" refkind="member"><highlight class="normal">esp_err_t<sp/><ref refid="group__g01__i2c_1gaa6817a14a21673842bdc988aedf23bcd" kindref="member">bsp_i2c_deinit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="group__g01__i2c_1ga7379e225eb4230551bdb96d2ed2dabca" refkind="member"><highlight class="normal">i2c_master_bus_handle_t<sp/><ref refid="group__g01__i2c_1ga7379e225eb4230551bdb96d2ed2dabca" kindref="member">bsp_i2c_get_handle</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>i2c</highlight><codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>storage</highlight><codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************************************</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/>*<sp/>LCD<sp/>interface</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/>*<sp/>LVGL<sp/>is<sp/>used<sp/>as<sp/>graphics<sp/>library.<sp/>LVGL<sp/>is<sp/>NOT<sp/>thread<sp/>safe,<sp/>therefore<sp/>the<sp/>user<sp/>must<sp/>take<sp/>LVGL<sp/>mutex</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>*<sp/>by<sp/>calling<sp/>bsp_display_lock()<sp/>before<sp/>calling<sp/>any<sp/>LVGL<sp/>API<sp/>(lv_...)<sp/>and<sp/>then<sp/>give<sp/>the<sp/>mutex<sp/>with</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/>*<sp/>bsp_display_unlock().</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/>*<sp/>Display&apos;s<sp/>backlight<sp/>must<sp/>be<sp/>enabled<sp/>explicitly<sp/>by<sp/>calling<sp/>bsp_display_backlight_on()</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>**************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_PIXEL_CLOCK_HZ<sp/><sp/><sp/><sp/><sp/>(40<sp/>*<sp/>1000<sp/>*<sp/>1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSP_LCD_SPI_NUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SPI2_HOST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BSP_CONFIG_NO_GRAPHIC_LIB<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="structbsp__display__cfg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="179" refid="structbsp__display__cfg__t_1aec4bda7bc3f599bfd98e0e68c0b68926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>lvgl_port_cfg_t<sp/><ref refid="structbsp__display__cfg__t_1aec4bda7bc3f599bfd98e0e68c0b68926" kindref="member">lvgl_port_cfg</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="180" refid="structbsp__display__cfg__t_1a5ca8835d65e0fc958726cbfb17861afb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structbsp__display__cfg__t_1a5ca8835d65e0fc958726cbfb17861afb" kindref="member">buffer_size</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="structbsp__display__cfg__t_1a9865134f79a455deb42ed07e52dc7d33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structbsp__display__cfg__t_1a9865134f79a455deb42ed07e52dc7d33" kindref="member">double_buffer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183" refid="structbsp__display__cfg__t_1a3c212f07d5d4337a5cadf642b2790e51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structbsp__display__cfg__t_1a3c212f07d5d4337a5cadf642b2790e51" kindref="member">buff_dma</ref>:<sp/>1;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="structbsp__display__cfg__t_1ae63a516e34101a45ef07c63519dba582" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structbsp__display__cfg__t_1ae63a516e34101a45ef07c63519dba582" kindref="member">buff_spiram</ref>:<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="185" refid="structbsp__display__cfg__t_1a3f8159130f2fcf0d4aab4b04febb5cf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structbsp__display__cfg__t_1a3f8159130f2fcf0d4aab4b04febb5cf0" kindref="member">sw_rotate</ref>:<sp/>1;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>flags;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}<sp/><ref refid="structbsp__display__cfg__t" kindref="compound">bsp_display_cfg_t</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="group__g04__display_1gae4275824d225d70a382b86178f39450c" refkind="member"><highlight class="normal">lv_display_t<sp/>*<ref refid="group__g04__display_1gae4275824d225d70a382b86178f39450c" kindref="member">bsp_display_start</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="group__g04__display_1gaff98dc9c5df3ce94267754f35face5d2" refkind="member"><highlight class="normal">lv_display_t<sp/>*<ref refid="group__g04__display_1gaff98dc9c5df3ce94267754f35face5d2" kindref="member">bsp_display_start_with_config</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structbsp__display__cfg__t" kindref="compound">bsp_display_cfg_t</ref><sp/>*cfg);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="group__g04__display_1gaa358520a1c77dbf054e73757e48dea9a" refkind="member"><highlight class="normal">lv_indev_t<sp/>*<ref refid="group__g04__display_1gaa358520a1c77dbf054e73757e48dea9a" kindref="member">bsp_display_get_input_dev</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="group__g04__display_1ga8f9276ddd28d9427995f513d36aed139" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__g04__display_1ga8f9276ddd28d9427995f513d36aed139" kindref="member">bsp_display_lock</ref>(uint32_t<sp/>timeout_ms);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="group__g04__display_1gac08779b1b61a813af6d9c96a4b54740d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__g04__display_1gac08779b1b61a813af6d9c96a4b54740d" kindref="member">bsp_display_unlock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="group__g04__display_1ga4bb816859abde4dcf196ca41b380a94a" refkind="member"><highlight class="normal">esp_err_t<sp/><ref refid="group__g04__display_1ga4bb816859abde4dcf196ca41b380a94a" kindref="member">bsp_display_enter_sleep</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="group__g04__display_1ga4528c90bb660dfe358849b9c379d7ca9" refkind="member"><highlight class="normal">esp_err_t<sp/><ref refid="group__g04__display_1ga4528c90bb660dfe358849b9c379d7ca9" kindref="member">bsp_display_exit_sleep</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="group__g04__display_1ga444b52fd41e46fc4d98fbb90b66a654c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__g04__display_1ga444b52fd41e46fc4d98fbb90b66a654c" kindref="member">bsp_display_rotate</ref>(lv_display_t<sp/>*disp,<sp/>lv_disp_rotation_t<sp/>rotation);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BSP_CONFIG_NO_GRAPHIC_LIB<sp/>==<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>display</highlight><codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************************************</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="276"><highlight class="comment"><sp/>*<sp/>Button</highlight></codeline>
+<codeline lineno="277"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="278"><highlight class="comment"><sp/>**************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="group__g05__buttons_1ga709ba5c932018eb218885bb20b27c6c0" refkind="member"><highlight class="normal">esp_err_t<sp/><ref refid="group__g05__buttons_1ga709ba5c932018eb218885bb20b27c6c0" kindref="member">bsp_iot_button_create</ref>(button_handle_t<sp/>btn_array[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*btn_cnt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>btn_array_size);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>buttons</highlight><codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h"/>
+  </compounddef>
+</doxygen>

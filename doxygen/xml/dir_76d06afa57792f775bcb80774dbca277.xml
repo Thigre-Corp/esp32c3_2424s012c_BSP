@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_76d06afa57792f775bcb80774dbca277" kind="dir">
+    <compoundname>gen</compoundname>
+    <innerdir refid="dir_13874ce5648c5c53238750c36d616016">gen/output</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="gen/"/>
+  </compounddef>
+</doxygen>

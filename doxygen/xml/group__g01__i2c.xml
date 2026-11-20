@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__g01__i2c" kind="group">
+    <compoundname>g01_i2c</compoundname>
+    <title>I2C</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__g01__i2c_1gafb504c284aa8a47f2ffee89038bd5b98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_i2c_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_i2c_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Init I2C driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG I2C parameter error</para>
+</listitem><listitem><para>ESP_FAIL I2C driver installation error </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="127" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="127" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g01__i2c_1gaa6817a14a21673842bdc988aedf23bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t bsp_i2c_deinit</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_i2c_deinit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Deinit I2C driver and free its resources. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK On success</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG I2C parameter error </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="137" column="11" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="137" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__g01__i2c_1ga7379e225eb4230551bdb96d2ed2dabca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>i2c_master_bus_handle_t</type>
+        <definition>i2c_master_bus_handle_t bsp_i2c_get_handle</definition>
+        <argsstring>(void)</argsstring>
+        <name>bsp_i2c_get_handle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get I2C driver handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>I2C handle </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="145" column="25" declfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" declline="145" declcolumn="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__g01__i2c_1gaf6e6a5b5564ddafadb75fca91f8f14b0" prot="public" static="no">
+        <name>BSP_I2C_SCL</name>
+        <initializer>(GPIO_NUM_5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="69" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g01__i2c_1ga4a7ea0acc73c945f4922eb57fd462beb" prot="public" static="no">
+        <name>BSP_I2C_SDA</name>
+        <initializer>(GPIO_NUM_4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="70" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__g01__i2c_1ga0ecff944440fa9ccf0241e8acf1427dc" prot="public" static="no">
+        <name>BSP_I2C_NUM</name>
+        <initializer>CONFIG_BSP_I2C_NUM</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" line="116" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/esp32c3_2424s012c.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>I2C BSP API. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

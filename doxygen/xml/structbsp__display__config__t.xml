@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbsp__display__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>bsp_display_config_t</compoundname>
+    <includes refid="display_8h" local="no">display.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbsp__display__config__t_1a0d3f31290063548337bb519672e8dd04" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bsp_display_config_t::max_transfer_sz</definition>
+        <argsstring></argsstring>
+        <name>max_transfer_sz</name>
+        <qualifiedname>bsp_display_config_t::max_transfer_sz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum transfer size, in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="50" column="9" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>BSP display low level configuration structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="49" column="1" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="49" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structbsp__display__config__t_1a0d3f31290063548337bb519672e8dd04" prot="public" virt="non-virtual"><scope>bsp_display_config_t</scope><name>max_transfer_sz</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbsp__lcd__handles__t" kind="struct" language="C++" prot="public">
+    <compoundname>bsp_lcd_handles_t</compoundname>
+    <includes refid="display_8h" local="no">display.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbsp__lcd__handles__t_1adbdb94dd358f816f931e4b4a4a2fd298" prot="public" static="no" mutable="no">
+        <type>esp_lcd_panel_io_handle_t</type>
+        <definition>esp_lcd_panel_io_handle_t bsp_lcd_handles_t::io</definition>
+        <argsstring></argsstring>
+        <name>io</name>
+        <qualifiedname>bsp_lcd_handles_t::io</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP LCD IO handle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="58" column="33" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbsp__lcd__handles__t_1aa72daaaf4952867a0a78db38e959a8a1" prot="public" static="no" mutable="no">
+        <type>esp_lcd_panel_handle_t</type>
+        <definition>esp_lcd_panel_handle_t bsp_lcd_handles_t::panel</definition>
+        <argsstring></argsstring>
+        <name>panel</name>
+        <qualifiedname>bsp_lcd_handles_t::panel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP LCD panel (color) handle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="59" column="33" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbsp__lcd__handles__t_1afb72bab61b124bc127bce75ea08ee37c" prot="public" static="no" mutable="no">
+        <type>esp_lcd_panel_handle_t</type>
+        <definition>esp_lcd_panel_handle_t bsp_lcd_handles_t::control</definition>
+        <argsstring></argsstring>
+        <name>control</name>
+        <qualifiedname>bsp_lcd_handles_t::control</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP LCD panel (control) handle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="60" column="33" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>BSP display return handles. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" line="57" column="1" bodyfile="gen/output/5feffe28-b213-43cd-9687-9e27da5bf4f7/esp32c3_2424s012c/include/bsp/display.h" bodystart="57" bodyend="61"/>
+    <listofallmembers>
+      <member refid="structbsp__lcd__handles__t_1afb72bab61b124bc127bce75ea08ee37c" prot="public" virt="non-virtual"><scope>bsp_lcd_handles_t</scope><name>control</name></member>
+      <member refid="structbsp__lcd__handles__t_1adbdb94dd358f816f931e4b4a4a2fd298" prot="public" virt="non-virtual"><scope>bsp_lcd_handles_t</scope><name>io</name></member>
+      <member refid="structbsp__lcd__handles__t_1aa72daaaf4952867a0a78db38e959a8a1" prot="public" virt="non-virtual"><scope>bsp_lcd_handles_t</scope><name>panel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

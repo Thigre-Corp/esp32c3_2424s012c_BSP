@@ -1,0 +1,30 @@
+
+version: "1.0.0"
+description: Board Support Package (BSP) for esp32c3_2424s012c
+url: https://github.com/Thigre-Corp/esp32c3_2424s012c_BSP
+
+targets:
+  - esp32c3
+
+tags:
+  - bsp
+
+dependencies:
+  idf: ">=5.2"
+  
+  espressif/esp_lvgl_port:
+    version: "^2"
+    public: true
+  
+  espressif/esp_lcd_gc9a01:
+    version: "*"
+    public: false
+  
+  espressif/esp_lcd_touch_cst816s:
+    version: "*"
+    public: false
+  
+  button:
+    version: "^4"
+    public: true
+  

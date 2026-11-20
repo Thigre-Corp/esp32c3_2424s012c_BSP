@@ -1,0 +1,191 @@
+{
+    "BSP_NAME": "esp32c3_2424s012c",
+    "BSP_URL": "https://github.com/Thigre-Corp/esp32c3_2424s012c_BSP",
+    "BSP_HW_LINK": "https://circuitdigest.com/review/inside-the-esp32-2424s012c-development-board-teardown",
+    "BSP_DESC_LONG": "esp32c3_2424s012c",
+    "BSP_PHOTO_KEEP": "",
+    "BSP_MCU": "esp32c3",
+    "BSP_FEATURES": [
+        {
+            "name": "I2C",
+            "enabled": [
+                "true",
+                "true"
+            ],
+            "pins": {
+                "BSP_I2C_SCL": "GPIO_NUM_5",
+                "BSP_I2C_SDA": "GPIO_NUM_4"
+            },
+            "BSP_I2C_PULLUP_EN": "true"
+        },
+        {
+            "name": "DISPLAY",
+            "enabled": [
+                "true",
+                "true"
+            ],
+            "interface": "SPI",
+            "driver": "espressif/esp_lcd_gc9a01",
+            "BSP_LCD_H_RES": "240",
+            "BSP_LCD_V_RES": "240",
+            "BSP_LCD_MIRROR_X": "true",
+            "BSP_LCD_PIXEL_CLOCK_MHZ": "40",
+            "BSP_LCD_BITS_PER_PIXEL": "16",
+            "BSP_LCD_BIGENDIAN": "true",
+            "BSP_LCD_INVERT_COLORS": "true",
+            "BSP_LCD_COLOR_FORMAT": "ESP_LCD_COLOR_FORMAT_RGB565",
+            "BSP_LCD_COLOR_SPACE": "LCD_RGB_ELEMENT_ORDER_BGR",
+            "BSP_LCD_SPI_NUM": "SPI2_HOST",
+            "pins": {
+                "BSP_LCD_PCLK": "GPIO_NUM_6",
+                "BSP_LCD_DATA0": "GPIO_NUM_7",
+                "BSP_LCD_DC": "GPIO_NUM_2",
+                "BSP_LCD_CS": "GPIO_NUM_10",
+                "BSP_LCD_RST": "GPIO_NUM_1",
+                "BSP_LCD_BACKLIGHT": "GPIO_NUM_3"
+            },
+            "BSP_LCD_INIT_CMDS": "",
+            "BSP_FEATURE_LCD_TYPE": "",
+            "DRIVER": "gc9a01",
+            "DRIVER_NAMESPACE": "espressif"
+        },
+        {
+            "name": "SCREEN_TOUCH",
+            "enabled": [
+                "true",
+                "true"
+            ],
+            "interface": "I2C",
+            "driver": "espressif/esp_lcd_touch_cst816s",
+            "pins": {
+                "BSP_LCD_TOUCH_INT": "GPIO_NUM_0"
+            },
+            "BSP_FEATURE_TOUCH_TYPE": "",
+            "DRIVER": "cst816s",
+            "DRIVER_NAMESPACE": "espressif",
+            "CFG": "ESP_LCD_TOUCH_IO_I2C_CST816S_CONFIG()"
+        },
+        {
+            "name": "BUTTON",
+            "enabled": [
+                "true",
+                "true"
+            ],
+            "BSP_BUTTON_NUM": "1",
+            "BSP_BUTTON_1_NAME": "btn",
+            "BSP_BUTTON_1_TYPE": "GPIO",
+            "pins": {
+                "BSP_BUTTON_1_IO": "GPIO_NUM_8"
+            }
+        },
+        {
+            "name": "WIFI",
+            "enabled": [
+                "true",
+                "true"
+            ],
+            "BSP_FEATURE_WIFI_TYPE": ""
+        }
+    ],
+    "I2C_CNT": 1,
+    "I2S_CNT": 1,
+    "BSP_VALID_NAME": "esp32c3_2424s012c",
+    "BSP_BOARDNAME": "BSP_BOARD_ESP32C3_2424S012C",
+    "BSP_CAPS": [
+        {
+            "name": "BSP_CAPS_DISPLAY",
+            "enabled": "1"
+        },
+        {
+            "name": "BSP_CAPS_TOUCH",
+            "enabled": "1"
+        },
+        {
+            "name": "BSP_CAPS_BUTTONS",
+            "enabled": "1"
+        },
+        {
+            "name": "BSP_CAPS_KNOB",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_AUDIO",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_AUDIO_SPEAKER",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_AUDIO_MIC",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_SDCARD",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_LED",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_CAMERA",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_BAT",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_IMU",
+            "enabled": "0"
+        },
+        {
+            "name": "BSP_CAPS_HUMITURE",
+            "enabled": "0"
+        }
+    ],
+    "BSP_DEPENDENCIES": [
+        {
+            "name": "espressif/esp_lvgl_port",
+            "version": "^2",
+            "public": "true",
+            "min_idf": "5.1"
+        },
+        {
+            "name": "espressif/esp_lcd_gc9a01",
+            "version": "*",
+            "public": "false",
+            "min_idf": "0"
+        },
+        {
+            "name": "espressif/esp_lcd_touch_cst816s",
+            "version": "*",
+            "public": "false",
+            "min_idf": "0"
+        },
+        {
+            "name": "button",
+            "version": "^4",
+            "public": "true",
+            "min_idf": "4.0"
+        }
+    ],
+    "BSP_REQUIRES": [
+        "esp_driver_i2c"
+    ],
+    "BSP_PRIV_REQUIRES": [
+        "esp_lcd",
+        "esp_driver_ledc"
+    ],
+    "MIN_IDF_VER": "5.2",
+    "BSP_FEATURE_EN": [],
+    "YEAR": 2026,
+    "BSP_SRC_FILES": [
+        "src/bsp_button.c",
+        "src/bsp_display.c",
+        "src/bsp_i2c.c"
+    ],
+    "BSP_PHOTO_FILENAME": "esp32c3_2424s012c.webp",
+    "NOGLIB": 0
+}
